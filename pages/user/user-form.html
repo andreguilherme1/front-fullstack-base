@@ -1,0 +1,41 @@
+	<!-- titulo cadastro de itens -->
+	<h1>Cadastro de usuários</h1>
+	<form class="row g-3 needs-validation" novalidate>
+
+		<input id="index" type="hidden">
+		<!-- colunas do table -->
+		<div class="col-md-12">
+			<label for="username" class="form-label">Nome</label>
+			<input type="text" class="form-control" id="username" required>
+			<div class="valid-feedback">
+				Nome preenchido
+			</div>
+			<div class="invalid-feedback">
+				Nome é obrigatório
+			</div>
+		</div>
+		<div class="col-md-12">
+			<label for="email" class="form-label">Email</label>
+			<input type="email" class="form-control" id="email" required>
+			<div class="valid-feedback">
+				Email preenchido
+			</div>
+			<div class="invalid-feedback">
+				Email é obrigatório
+			</div>
+		</div>
+		<div class="col-md-12">
+			<label for="password" class="form-label">Senha</label>
+			<input type="text" class="form-control" id="password" required>
+			<div class="valid-feedback">
+				Senha preenchida
+			</div>
+			<div class="invalid-feedback">
+				Senha é obrigatória
+			</div>
+		</div>
+		<div class="col-12">
+			<button onclick="saveUser()" id="salvar-btn" class="btn btn-primary">Salvar</button>
+			<button onclick="tableShow('user')" type="button" class="btn btn-danger">Cancelar</button>
+		</div>
+	</form>

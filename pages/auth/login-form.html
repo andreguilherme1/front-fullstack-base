@@ -1,0 +1,41 @@
+<!-- titulo cadastro de itens -->
+<h2 style="text-align: center;font-size: 2.5rem;margin-bottom: 30px;margin-top: -18px;">Fullstack App</h2>
+<h1>LOGIN</h1>
+<form id="form-login" class=" row g-3 needs-validation" novalidate>
+
+	<div class="col-md-12">
+		<label for="username-login" class="form-label">Usuário</label>
+		<input type="text" class="form-control" id="username-login" required>
+		<div class="valid-feedback">
+			Nome preenchido
+		</div>
+		<div class="invalid-feedback">
+			Nome é obrigatório
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<label for="password-login" class="form-label">Senha</label>
+		<input type="password" class="form-control" id="password-login" required>
+		<div class="valid-feedback">
+			Senha preenchida
+		</div>
+		<div class="invalid-feedback">
+			Senha é obrigatória
+		</div>
+	</div>
+
+	<div class="col-12" style="display: flex; gap: 10px">
+		<button onclick="login()" style="width: inherit;" id="logar-btn" class="btn btn-primary">Entrar</button>
+		<button onclick="clearForm()" style="width: inherit;" type="button" class="btn btn-danger">Limpar</button>
+	</div>
+</form>
+
+<script>
+	function clearForm() {
+		setTimeout(() => {
+			$("form").removeClass("was-validated")
+		}, 1)
+		$("form").trigger("reset")
+	}
+</script>

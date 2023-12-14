@@ -1,0 +1,45 @@
+	<h1>Dashboard</h1>
+<div style="display: flex; flex-direction: row; gap: 10px; text-align: center;justify-content: space-between;">
+<div class="card" style="width: 18rem;">
+	<div class="card-body">
+		<h5 class="card-title">USUÁRIOS</h5>
+		<p id="users-total" class="card-text"></p>
+		<a onclick="tableShow('user')" class="btn btn-primary">Usuários</a>
+	</div>
+</div>
+
+<div class="card" style="width: 18rem;">
+	<div class="card-body">
+		<h5 class="card-title">PRODUTOS</h5>
+		<p id="products-total" class="card-text"></p>
+		<a onclick="tableShow('product')" class="btn btn-primary">Produtos</a>
+	</div>
+</div>
+</div>
+
+
+
+<script>
+
+	async function get(resource) {
+		fetch("https://api-fullstack-base.henningsummer1.repl.co/" + resource, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+				"Authorization": `Bearer ${localStorage.getItem('token')}`
+			}
+		}).then((response) => {
+			return response.json()
+		}).then((data) => {
+			console.log('dados', data)
+			$("#" + resource + "-total").text('Total cadastrado: ' + data.length)
+
+		}).catch(() => {
+			// $("#mensage-table").html("<h6>Erro ao montar a tabela. Faça login</h6>")
+		})
+	}
+	setTimeout(() => {
+	get("users")
+	get("products")
+	},500)
+</script>

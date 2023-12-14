@@ -1,0 +1,41 @@
+	<!-- titulo cadastro de itens -->
+	<h1>Cadastro de Produtos</h1>
+	<form class="row g-3 needs-validation" novalidate>
+
+		<input id="index-product" type="hidden">
+		<!-- colunas do table -->
+		<div class="col-md-12">
+			<label for="name" class="form-label">Nome</label>
+			<input type="text" class="form-control" id="name" required>
+			<div class="valid-feedback">
+				Nome preenchido
+			</div>
+			<div class="invalid-feedback">
+				Nome é obrigatório
+			</div>
+		</div>
+		<div class="col-md-12">
+			<label for="price" class="form-label">Preço</label>
+			<input type="text" class="form-control" id="price" required>
+			<div class="valid-feedback">
+				Preço preenchido
+			</div>
+			<div class="invalid-feedback">
+				Preço é obrigatório
+			</div>
+		</div>
+		<div class="col-md-12">
+			<label for="quantity" class="form-label">Quantidade</label>
+			<input type="text" class="form-control" id="quantity" required>
+			<div class="valid-feedback">
+				Quantidade preenchida
+			</div>
+			<div class="invalid-feedback">
+				Quantidade é obrigatória
+			</div>
+		</div>
+		<div class="col-12">
+			<button onclick="saveProduct()" id="salvar-btn-product" class="btn btn-primary">Salvar</button>
+			<button onclick="tableShow('product')" type="button" class="btn btn-danger">Cancelar</button>
+		</div>
+	</form>

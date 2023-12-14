@@ -1,0 +1,31 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+}
+
+#loader{
+  width: 50px;
+  height: 50px;
+  border: 10px solid lightgray;
+  border-top: 10px solid blue;
+  border-radius: 50%;
+  animation-name: rotateLoader;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: absolute;
+	left: 45%;
+	top: 50%;
+}
+
+@keyframes rotateLoader{
+  from {
+    transform:rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}

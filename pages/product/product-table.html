@@ -1,0 +1,30 @@
+	<!-- titulo lista de itens -->
+	<h1>Lista de Produtos</h1>
+
+	<!-- Botao de criar novo item -->
+	<div class="d-grid gap-2">
+		<button onclick="formShow('product')" class="btn btn-primary" type="button">Cadastrar novo Produto</button>
+	</div>
+	<br>
+
+
+	<table class="table table-striped" style="text-align: center;">
+		<thead class="table-light">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Preço</th>
+				<th scope="col">Quantidade</th>
+				<th scope="col">Ações</th>
+			</tr>
+		</thead>
+		<tbody id="table-product">
+
+		</tbody>
+	</table>
+
+	<span style="text-align: center;" id="mensage-table"></span>
+
+	<script>
+		getProducts()	
+	</script>
