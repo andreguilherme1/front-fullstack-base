@@ -1,5 +1,5 @@
 async function editUser(id) {
-	await fetch("https://api-fullstack-base.henningsummer1.repl.co/users/"+id,{
+	await fetch("https://api-fullstack-base.andreguilherme6.repl.co/users/"+id,{
 		method: "GET",
 		headers: {
 		"Content-Type": "application/json",

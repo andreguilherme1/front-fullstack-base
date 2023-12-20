@@ -16,7 +16,7 @@ function saveUser() {
 		return
 		}
 		fetch(
-			"https://api-fullstack-base.henningsummer1.repl.co/users/register",
+			"https://api-fullstack-base.andreguilherme6.repl.co/users/register",
 			{	
 				method: "POST",
 				headers: {
@@ -40,7 +40,7 @@ function saveUser() {
 		return
 		}
 		fetch(
-			"https://api-fullstack-base.henningsummer1.repl.co/users/update/",
+			"https://api-fullstack-base.andreguilherme6.repl.co/users/update/",
 			{
 				method: "PATCH",
 				headers: {

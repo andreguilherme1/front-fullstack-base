@@ -1,8 +1,8 @@
 	<!-- titulo cadastro de itens -->
-	<h1>Cadastro de Produtos</h1>
+	<h1>Cadastro de Cursos</h1>
 	<form class="row g-3 needs-validation" novalidate>
 
-		<input id="index-product" type="hidden">
+		<input id="index-curso" type="hidden">
 		<!-- colunas do table -->
 		<div class="col-md-12">
 			<label for="name" class="form-label">Nome</label>
@@ -15,27 +15,27 @@
 			</div>
 		</div>
 		<div class="col-md-12">
-			<label for="price" class="form-label">Preço</label>
+			<label for="price" class="form-label">Descrição</label>
 			<input type="text" class="form-control" id="price" required>
 			<div class="valid-feedback">
-				Preço preenchido
+				Descrição preenchido
 			</div>
 			<div class="invalid-feedback">
-				Preço é obrigatório
+				Descrição é obrigatório
 			</div>
 		</div>
 		<div class="col-md-12">
-			<label for="quantity" class="form-label">Quantidade</label>
+			<label for="quantity" class="form-label">Duração em semanas</label>
 			<input type="text" class="form-control" id="quantity" required>
 			<div class="valid-feedback">
-				Quantidade preenchida
+				Duração em semanas preenchida
 			</div>
 			<div class="invalid-feedback">
-				Quantidade é obrigatória
+				Duração em semanas é obrigatória
 			</div>
 		</div>
 		<div class="col-12">
-			<button onclick="saveProduct()" id="salvar-btn-product" class="btn btn-primary">Salvar</button>
-			<button onclick="tableShow('product')" type="button" class="btn btn-danger">Cancelar</button>
+			<button onclick="saveCurso()" id="salvar-btn-curso" class="btn btn-primary">Salvar</button>
+			<button onclick="tableShow('curso')" type="button" class="btn btn-danger">Cancelar</button>
 		</div>
 	</form>

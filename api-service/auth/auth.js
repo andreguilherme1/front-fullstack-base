@@ -7,7 +7,7 @@ async function login() {
 		password: password,
 	};
 
-	let url = "https://api-fullstack-base.henningsummer1.repl.co/login";
+	let url = "https://api-fullstack-base.andreguilherme6.repl.co/login";
 
 	if(username === "" || password === ""){
 		return
@@ -18,6 +18,7 @@ async function login() {
 			method: 'POST',
 			body: JSON.stringify(user),
 			headers: {
+        'Access-Control-Allow-Origin': '*',
 				'Content-Type': 'application/json',
 				'Accept': 'application/json'
 			},
@@ -44,7 +45,7 @@ async function login() {
 
 function logout() {
 	fetch(
-		"https://api-fullstack-base.henningsummer1.repl.co/logout",
+		"https://api-fullstack-base.andreguilherme6.repl.co/logout",
 		{
 			method: "GET",
 			headers: {

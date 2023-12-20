@@ -1,9 +1,9 @@
-function deleteProduct(id) { // função deletar que pega o Id a ser deletado
+function deleteCurso(id) { // função deletar que pega o Id a ser deletado
 	user = {
 		id: id
 	}
 	fetch(
-		"https://api-fullstack-base.henningsummer1.repl.co/products/delete/",
+		"https://api-fullstack-base.andreguilherme6.repl.co/cursos/delete/",
 		{
 			method: "DELETE",
 			headers: {
@@ -13,6 +13,6 @@ function deleteProduct(id) { // função deletar que pega o Id a ser deletado
 			body: JSON.stringify(user)
 		}
 	).then(() => {
-		getProducts() // monta a tabela
+		getCursos() // monta a tabela
 	})
 }

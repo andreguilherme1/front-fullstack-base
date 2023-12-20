@@ -3,7 +3,7 @@ function deleteUser(id) { // função deletar que pega o Id a ser deletado
 		id: id
 	}
 	fetch(
-		"https://api-fullstack-base.henningsummer1.repl.co/users/delete/",
+		"https://api-fullstack-base.andreguilherme6.repl.co/users/delete/",
 		{
 			method: "DELETE",
 			headers: {

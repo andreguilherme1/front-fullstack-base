@@ -23,6 +23,14 @@ function formShow(form){
 			},700)
 		}
 
+  if(form === "curso"){
+    $('#form-content').load('../pages/curso/curso-form.html');
+    setTimeout(()=>{
+    formConfig()
+    $('#form-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
+    },700)
+  }
+
 		
 }
 
@@ -63,6 +71,15 @@ function tableShow(table){
     		$('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
 			}, 700)
 		}
+
+  if(table === "curso"){
+  $('#table-content').load('../pages/curso/curso-table.html');
+    setTimeout(() => {
+      $("form").removeClass("was-validated")
+      $("form").trigger("reset")
+      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
+    }, 700)
+  }
 }
 
 

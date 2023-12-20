@@ -1,7 +1,7 @@
 async function getUsers(){
 	let token = localStorage.getItem('token')
 	console.log('ele', token)
-	await fetch("https://api-fullstack-base.henningsummer1.repl.co/users",{
+	await fetch("https://api-fullstack-base.andreguilherme6.repl.co/users",{
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
