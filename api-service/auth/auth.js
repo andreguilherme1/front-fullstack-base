@@ -7,7 +7,7 @@ async function login() {
 		password: password,
 	};
 
-	let url = "https://api-fullstack-base.andreguilherme6.repl.co/login";
+	let url = "http://localhost:3000/login";
 
 	if(username === "" || password === ""){
 		return
@@ -37,15 +37,23 @@ async function login() {
 
 		console.log('user', user.username)
 
-		$("#userName").text('Usuário: ' + user.username.toUpperCase());
+		$("#userName").text('Aluno: ' + user.username.toUpperCase());
 	} catch (error) {
 		console.log(error);
 	}
+  
+  $(".menu-login").hide()
+  $(".menu-nova-conta").hide()
+  $(".menu-logout").show()
+  $("#userName").show()
+
+  
+  
 }
 
 function logout() {
 	fetch(
-		"https://api-fullstack-base.andreguilherme6.repl.co/logout",
+		"http://localhost:3000/logout",
 		{
 			method: "GET",
 			headers: {
@@ -61,4 +69,25 @@ function logout() {
 		}, 1)
 		$("form").trigger("reset")
 	})
+  $(".text-body-secondary").hide()
+  $(".menu-logout").hide()
+  $(".menu-login").show()
+  $(".menu-nova-conta").show()
+  $(".tudo").show()
+  $("footer").show()
+  
 }
+
+
+
+$("#userName").css({
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'start',
+  fontSize: '1.325rem',
+  fontFamily: 'Inter',
+  fontWeight: 500,
+  lineHeight: '40px',
+});
+
+$(".menu-logout").hide()

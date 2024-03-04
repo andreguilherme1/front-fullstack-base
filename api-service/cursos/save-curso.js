@@ -3,21 +3,24 @@ function saveCurso() {
 	let nome = $("#nome").val() // pega o valor do input
 	let descricao = $("#descricao").val() // pega o valor do input 
 	let duracao_semanas = $("#duracao_semanas").val() // pega o valor do input 
+  let n_aulas = $("#n_aulas").val()
+  let nivel = $("#nivel").val()
+  let foto = $("#foto").val()
 	let id = $("#index-curso").val() // pega o valor do input 
 
-	let curso = { nome, descricao, duracao_semanas, id } // criando o objeto
+	let curso = { nome, descricao, duracao_semanas, n_aulas, nivel, foto, id } // criando o objeto
 
 	let status = $('#salvar-btn-curso').text()
 
 	console.log(status)
 
 	if (status == "Salvar") {
-		if(curso.nome === "" || curso.descricao === "" || curso.duracao_semanas === ""){
+		if(curso.nome === "" || curso.descricao === "" || curso.duracao_semanas === "" || n_aulas === "" || nivel === "" || curso.foto === ""){
 		return
 		}
 		delete curso.id
 		fetch(
-			"https://api-fullstack-base.andreguilherme6.repl.co/cursos/register",
+			"http://localhost:3000/cursos/register",
 			{	
 				method: "POST",
 				headers: {
@@ -38,11 +41,11 @@ function saveCurso() {
 			})
 
 	} else {
-		if(curso.nome === "" || curso.descricao === "" || curso.duracao_semanas === ""){
+		if(curso.nome === "" || curso.descricao === "" || curso.duracao_semanas === "" || curso.n_aulas === "" || curso.nivel === "" || curso.foto === ""){
 		return
 		}
 		fetch(
-			"https://api-fullstack-base.andreguilherme6.repl.co/cursos/update/",
+			"http://localhost:3000/cursos/update/",
 			{
 				method: "PATCH",
 				headers: {
@@ -62,4 +65,7 @@ function saveCurso() {
 		})
 	}
 
+  $(".tudo").hide(function() {
+    $("footer").addClass("fixed-footer");
+  });
 }

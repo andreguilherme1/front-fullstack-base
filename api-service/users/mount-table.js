@@ -9,7 +9,7 @@ function mountUsers(users) {
 					<td>${user.username}</td>
 					<td>${user.email}</td>
 					<td>
-						<button ${verifyAdmin(user) ? 'disabled' : ''}  type="button" onclick="editUser(${user.id})" class="btn btn-primary btn-sm">Editar</button>
+						<button ${verifyAdmin(user) ? 'disabled' : ''}  type="button" onclick="editUser(${user.id})" class="btn btn-warning btn-sm" style="color: white;">Editar</button>
 						<button id="btn-deletar" ${verifyAdmin(user) ? 'disabled' : ''}  type="button" onclick="deleteUser(${user.id}); tableShow('user')" class="btn btn-danger btn-sm">Excluir</button>
 					</td>
 				</tr>

@@ -1,12 +1,15 @@
 	<!-- titulo cadastro de itens -->
-	<h1>Cadastro de alunos</h1>
+	
 	<form class="row g-3 needs-validation" novalidate>
 
 		<input id="index" type="hidden">
 		<!-- colunas do table -->
-		<div class="col-md-12">
-			<label for="username" class="form-label">Nome</label>
-			<input type="text" class="form-control" id="username" required>
+<div class="container">
+  <div class="login-box">
+    <h1>Cadastro de alunos</h1>
+		<div class="form-group" style="margin-bottom: -10px;">
+			<label for="username" class="form-label"></label>
+			<input type="text" class="form-control" id="username" placeholder="Nome" required>
 			<div class="valid-feedback">
 				Nome preenchido
 			</div>
@@ -14,9 +17,9 @@
 				Nome é obrigatório
 			</div>
 		</div>
-		<div class="col-md-12">
-			<label for="email" class="form-label">Email</label>
-			<input type="email" class="form-control" id="email" required>
+		<div class="form-group" style="margin-bottom: -10px;">
+			<label for="email" class="form-label"></label>
+			<input type="email" class="form-control" id="email" placeholder="E-mail" required>
 			<div class="valid-feedback">
 				Email preenchido
 			</div>
@@ -24,9 +27,9 @@
 				Email é obrigatório
 			</div>
 		</div>
-		<div class="col-md-12">
-			<label for="password" class="form-label">Senha</label>
-			<input type="text" class="form-control" id="password" required>
+		<div class="form-group">
+			<label for="password" class="form-label"></label>
+			<input type="text" class="form-control" id="password" placeholder="Senha" required>
 			<div class="valid-feedback">
 				Senha preenchida
 			</div>
@@ -34,8 +37,10 @@
 				Senha é obrigatória
 			</div>
 		</div>
-		<div class="col-12">
-			<button onclick="saveUser()" id="salvar-btn" class="btn btn-primary">Salvar</button>
-			<button onclick="tableShow('user')" type="button" class="btn btn-danger">Cancelar</button>
+		<div class="col-12" style="display: flex; gap: 10px">
+      <button onclick="saveUser(); tableShow('dashboard');" id="salvar-btn" class="botao">Salvar</button>
+			<button onclick="tableShow('user')" type="button" class="botao">Cancelar</button>
 		</div>
+  </div>
+</div>
 	</form>

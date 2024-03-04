@@ -1,22 +1,16 @@
-	<!-- titulo lista de itens -->
-	<h1>Lista de Cursos</h1>
+  <!-- Botao de criar novo item -->
+	<div class="d-flex gap-2" style="width: 500px; margin: auto; margin-top: 130px">
 
-	<!-- Botao de criar novo item -->
-	<div class="d-grid gap-2">
-		<button onclick="formShow('curso')" class="btn btn-primary" type="button">Cadastrar novo Curso</button>
+		<button onclick="formShow('curso')" class="botao" type="button">Cadastrar novo Curso</button>
+    <button onclick="tableShow('dashboard')" class="botao" type="button">Voltar</button>
 	</div>
 	<br>
 
+  <!-- titulo lista de itens -->
+  <h1>Lista de Cursos</h1>
 
 	<table class="table table-striped" style="text-align: center;">
 		<thead class="table-light">
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">Nome</th>
-				<th scope="col">Descrição</th>
-				<th scope="col">Duração em semanas</th>
-        <th scope="col">Ações</th>
-			</tr>
 		</thead>
 		<tbody id="table-curso">
 

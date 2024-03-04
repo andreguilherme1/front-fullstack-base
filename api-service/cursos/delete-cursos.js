@@ -3,7 +3,7 @@ function deleteCurso(id) { // função deletar que pega o Id a ser deletado
 		id: id
 	}
 	fetch(
-		"https://api-fullstack-base.andreguilherme6.repl.co/cursos/delete/",
+		"http://localhost:3000/cursos/delete/",
 		{
 			method: "DELETE",
 			headers: {

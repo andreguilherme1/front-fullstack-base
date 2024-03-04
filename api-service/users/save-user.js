@@ -16,7 +16,7 @@ function saveUser() {
 		return
 		}
 		fetch(
-			"https://api-fullstack-base.andreguilherme6.repl.co/users/register",
+			"http://localhost:3000/users/register",
 			{	
 				method: "POST",
 				headers: {
@@ -28,7 +28,7 @@ function saveUser() {
 		).then(()=>{
 				$("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
 				getUsers()
-				tableShow('user')
+        window.location.href = 'localhost:3000'
 				setTimeout(() => {
 					$("form").removeClass("was-validated")
 				}, 1)
@@ -40,7 +40,7 @@ function saveUser() {
 		return
 		}
 		fetch(
-			"https://api-fullstack-base.andreguilherme6.repl.co/users/update/",
+			"http://localhost:3000/users/update/",
 			{
 				method: "PATCH",
 				headers: {
@@ -53,7 +53,7 @@ function saveUser() {
 			console.log(resp.json())
 		$("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
 		getUsers()
-		tableShow('user')
+      window.location.href = 'localhost:3000'
 		setTimeout(() => {
 			$("form").removeClass("was-validated")
 		}, 1)
@@ -61,4 +61,9 @@ function saveUser() {
 		})
 	}
 
+  
+}
+
+function cancelarUser() {
+  window.location.href = 'localhost:3000'
 }

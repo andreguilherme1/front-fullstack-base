@@ -11,14 +11,10 @@ function formShow(form){
 			$('#form-content').load('../pages/user/user-form.html')
 			setTimeout(()=>{
 			formConfig()
-    	$('#form-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
-			},700)
-		}
-	
-		if(form === "product"){
-			$('#form-content').load('../pages/product/product-form.html');
-			setTimeout(()=>{
-			formConfig()
+      $(".tudo").hide(function() {
+      $("footer").addClass("fixed-footer");
+        });
+      
     	$('#form-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
 			},700)
 		}
@@ -27,60 +23,89 @@ function formShow(form){
     $('#form-content').load('../pages/curso/curso-form.html');
     setTimeout(()=>{
     formConfig()
+     
     $('#form-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
-    },700)
+    },700);
   }
 
-		
+  
 }
 
 
-function tableShow(table){
-  $('#loader').show()
-  $('#form-content').hide()
-  $('#login-content').hide()
-	$('.navbar-toggler').show()
-	$('.navbar-dark').show()
-  setTimeout(()=>{
-    $('#loader').hide()
-  },500)
-	
-		if(table === "user"){
-			setTimeout(() => {
-    		$('#table-content').load('../pages/user/user-table.html')
-				$("form").removeClass("was-validated")
-				$("form").trigger("reset")
-   			$('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
-			}, 700)
-		}
-	
-		if(table === "dashboard"){
-			setTimeout(() => {
-    		$('#table-content').load('../pages/dashboard/dashboard.html')
-				$("form").removeClass("was-validated")
-				$("form").trigger("reset")
-   			$('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
-			}, 700)
-		}
-	
-		if(table === "product"){
-    $('#table-content').load('../pages/product/product-table.html');
-			setTimeout(() => {
-				$("form").removeClass("was-validated")
-				$("form").trigger("reset")
-    		$('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
-			}, 700)
-		}
 
-  if(table === "curso"){
-  $('#table-content').load('../pages/curso/curso-table.html');
+function tableShow(table) {
+  $('#loader').show();
+  $('#form-content').hide();
+  $('#login-content').hide();
+  $('.navbar-toggler').show();
+  $('.navbar-dark').show();
+  setTimeout(() => {
+    $('#loader').hide();
+  }, 500);
+
+  if (table === "user") {
     setTimeout(() => {
-      $("form").removeClass("was-validated")
-      $("form").trigger("reset")
-      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
-    }, 700)
+      $('#table-content').load('../pages/user/user-table.html');
+      $("form").removeClass("was-validated");
+      $("form").trigger("reset");
+  
+      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
+    }, 700);
   }
+
+  if (table === "dashboard") {
+    setTimeout(() => {
+      $('#table-content').load('../pages/dashboard/dashboard.html');
+      $("form").removeClass("was-validated");
+      $("form").trigger("reset");
+      $(".tudo").hide(function() {
+        $("footer").addClass("fixed-footer");
+      });
+      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
+    }, 700);
+  }
+
+  if (table === "curso") {
+    $('#table-content').load('../pages/curso/curso-table.html');
+    setTimeout(() => {
+      $("form").removeClass("was-validated");
+      $("form").trigger("reset");
+      $(".tudo").hide(function() {
+        $("footer").addClass("fixed-footer");
+      });
+      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
+    }, 700);
+  }
+
+  if (table === "contato") {
+    $('#table-content').load('../pages/contato/contato.html');
+    setTimeout(() => {
+      $("form").removeClass("was-validated");
+      $("form").trigger("reset");
+      $(".tudo").hide(function() {
+        $("footer").addClass("fixed-footer");
+      });
+      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
+    }, 700);
+  }
+
+  if (table === "sobre") {
+    $('#table-content').load('../pages/sobre/sobre.html');
+    setTimeout(() => {
+      $("form").removeClass("was-validated");
+      $("form").trigger("reset");
+      $(".tudo").hide(function() {
+        $("footer").addClass("fixed-footer");
+      });
+      $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
+    }, 700);
+  }
+
+  
+
+  
 }
+
 
 
 function loginShow(){
@@ -98,6 +123,10 @@ function loginShow(){
 		formConfig()
    	$('#login-content').show({ duration: 500, easing: 'swing', effect: 'fade' })
 	},700)
+  $('#tudo').hide()
+  $(".tudo").hide(function() {
+  $("footer").addClass("fixed-footer");
+  });
 }
 
 

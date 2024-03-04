@@ -1,5 +1,5 @@
 async function editCurso(id) {
-	await fetch("https://api-fullstack-base.andreguilherme6.repl.co/cursos/"+id,{
+	await fetch("http://localhost:3000/cursos/"+id,{
 		method: "GET",
 		headers: {
 		"Content-Type": "application/json",
@@ -17,10 +17,17 @@ async function editCurso(id) {
 			
 			setTimeout(() => {
 			$('#salvar-btn-curso').text("Editar") // muda o valor do botao "salvar" para "editar"
+      $('#salvar-btn-curso, .btn-sm').css({
+           'backgroundColor': '#ffc107',
+           'border': 'none'  // Remove a borda
+         });
 			$("#index-curso").val(curso.id)
-			$("#name").val(curso.name)
-			$("#price").val(curso.price)
-			$("#quantity").val(curso.quantity)
+			$("#nome").val(curso.nome)
+			$("#descricao").val(curso.descricao)
+			$("#duracao_semanas").val(curso.duracao_semanas)
+      $("#n_aulas").val(curso.n_aulas)
+      $("#nivel").val(curso.nivel)
+      $("#foto").val(curso.nivel)
 			},1000)
 		})
 }

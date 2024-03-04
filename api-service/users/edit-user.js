@@ -1,5 +1,5 @@
 async function editUser(id) {
-	await fetch("https://api-fullstack-base.andreguilherme6.repl.co/users/"+id,{
+	await fetch("http://localhost:3000/users/"+id,{
 		method: "GET",
 		headers: {
 		"Content-Type": "application/json",
@@ -18,6 +18,10 @@ async function editUser(id) {
 			
 			setTimeout(() => {
 			$('#salvar-btn').text("Editar") // muda o valor do botao "salvar" para "editar"
+      $('#salvar-btn-curso, .btn-sm').css({
+          'backgroundColor': '#ffc107',
+          'border': 'none'  // Remove a borda
+        });
 			$("#index").val(user.id)
 			$("#username").val(user.username)
 			$("#email").val(user.email)

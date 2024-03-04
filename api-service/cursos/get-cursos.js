@@ -1,7 +1,7 @@
 async function getCursos(){
 	let token = localStorage.getItem('token')
 	console.log('ele', token)
-	await fetch("https://api-fullstack-base.andreguilherme6.repl.co/cursos",{
+	await fetch("http://localhost:3000/cursos",{
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
@@ -20,3 +20,4 @@ async function getCursos(){
 }
 
 getCursos()
+

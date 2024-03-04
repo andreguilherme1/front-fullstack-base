@@ -1,10 +1,11 @@
-	<h1>Dashboard</h1>
+<div class="esconder">
+<h1>Dashboard</h1>
 <div style="display: flex; flex-direction: row; gap: 10px; text-align: center; justify-content: space-between;">
 <div class="card" style="width: 18rem;">
 	<div class="card-body">
 		<h5 class="card-title">ALUNOS</h5>
 		<p id="users-total" class="card-text"></p>
-		<a onclick="tableShow('user')" class="btn btn-primary">Alunos</a>
+		<a onclick="tableShow('user')" class="botao">Alunos</a>
 	</div>
 </div>
 
@@ -12,9 +13,10 @@
     <div class="card-body">
       <h5 class="card-title">CURSOS</h5>
       <p id="cursos-total" class="card-text"></p>
-      <a onclick="tableShow('curso')" class="btn btn-primary">Cursos</a>
+      <a onclick="tableShow('curso')" class="botao">Cursos</a>
     </div>
   </div>
+</div>
 </div>
 
 
@@ -39,7 +41,6 @@
 	}
 	setTimeout(() => {
 	get("users")
-	get("products")
   get("cursos")
 	},500)
 </script>
