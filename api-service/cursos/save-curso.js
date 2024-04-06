@@ -20,7 +20,7 @@ function saveCurso() {
 		}
 		delete curso.id
 		fetch(
-			"http://localhost:3000/cursos/register",
+			"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/cursos/register",
 			{	
 				method: "POST",
 				headers: {
@@ -45,7 +45,7 @@ function saveCurso() {
 		return
 		}
 		fetch(
-			"http://localhost:3000/cursos/update/",
+			"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/cursos/update/",
 			{
 				method: "PATCH",
 				headers: {

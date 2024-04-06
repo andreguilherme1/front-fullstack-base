@@ -1,5 +1,5 @@
 async function editUser(id) {
-	await fetch("http://localhost:3000/users/"+id,{
+	await fetch("https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/users/"+id,{
 		method: "GET",
 		headers: {
 		"Content-Type": "application/json",

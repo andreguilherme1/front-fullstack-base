@@ -3,7 +3,7 @@ function deleteCurso(id) { // função deletar que pega o Id a ser deletado
 		id: id
 	}
 	fetch(
-		"http://localhost:3000/cursos/delete/",
+		"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/cursos/delete/",
 		{
 			method: "DELETE",
 			headers: {

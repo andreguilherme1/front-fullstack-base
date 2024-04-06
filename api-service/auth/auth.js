@@ -7,7 +7,7 @@ async function login() {
 		password: password,
 	};
 
-	let url = "http://localhost:3000/login";
+	let url = "https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/login";
 
 	if(username === "" || password === ""){
 		return
@@ -53,7 +53,7 @@ async function login() {
 
 function logout() {
 	fetch(
-		"http://localhost:3000/logout",
+		"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/logout",
 		{
 			method: "GET",
 			headers: {

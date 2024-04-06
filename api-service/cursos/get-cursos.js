@@ -1,7 +1,7 @@
 async function getCursos(){
 	let token = localStorage.getItem('token')
 	console.log('ele', token)
-	await fetch("http://localhost:3000/cursos",{
+	await fetch("https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/cursos",{
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
