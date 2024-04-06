@@ -28,7 +28,7 @@ function saveUser() {
 		).then(()=>{
 				$("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
 				getUsers()
-        window.location.href = 'https://api-fullstack-base.onrender.com'
+        window.location.href = 'localhost:3000'
 				setTimeout(() => {
 					$("form").removeClass("was-validated")
 				}, 1)
@@ -53,7 +53,7 @@ function saveUser() {
 			console.log(resp.json())
 		$("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
 		getUsers()
-      window.location.href = 'https://api-fullstack-base.onrender.com'
+      window.location.href = 'localhost:3000'
 		setTimeout(() => {
 			$("form").removeClass("was-validated")
 		}, 1)
@@ -65,5 +65,5 @@ function saveUser() {
 }
 
 function cancelarUser() {
-  window.location.href = 'https://api-fullstack-base.onrender.com'
+  window.location.href = 'localhost:3000'
 }
