@@ -16,7 +16,7 @@ function saveUser() {
 		return
 		}
 		fetch(
-			"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/users/register",
+			"https://api-fullstack-base.onrender.com/users/register",
 			{	
 				method: "POST",
 				headers: {
@@ -28,7 +28,7 @@ function saveUser() {
 		).then(()=>{
 				$("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
 				getUsers()
-        window.location.href = 'https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI'
+        window.location.href = 'https://api-fullstack-base.onrender.com'
 				setTimeout(() => {
 					$("form").removeClass("was-validated")
 				}, 1)
@@ -40,7 +40,7 @@ function saveUser() {
 		return
 		}
 		fetch(
-			"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/users/update/",
+			"https://api-fullstack-base.onrender.com/users/update/",
 			{
 				method: "PATCH",
 				headers: {
@@ -53,7 +53,7 @@ function saveUser() {
 			console.log(resp.json())
 		$("#salvar-btn").text("Salvar") // muda o valor do botão de Salvar para Editar
 		getUsers()
-      window.location.href = 'https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI'
+      window.location.href = 'https://api-fullstack-base.onrender.com'
 		setTimeout(() => {
 			$("form").removeClass("was-validated")
 		}, 1)
@@ -65,5 +65,5 @@ function saveUser() {
 }
 
 function cancelarUser() {
-  window.location.href = 'https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI'
+  window.location.href = 'https://api-fullstack-base.onrender.com'
 }

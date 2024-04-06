@@ -3,7 +3,7 @@ function deleteUser(id) { // função deletar que pega o Id a ser deletado
 		id: id
 	}
 	fetch(
-		"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/users/delete/",
+		"https://api-fullstack-base.onrender.com/users/delete/",
 		{
 			method: "DELETE",
 			headers: {

@@ -7,7 +7,7 @@ async function login() {
 		password: password,
 	};
 
-	let url = "https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/login";
+	let url = "https://api-fullstack-base.onrender.com/login";
 
 	if(username === "" || password === ""){
 		return
@@ -53,7 +53,7 @@ async function login() {
 
 function logout() {
 	fetch(
-		"https://api.render.com/deploy/srv-co8js7ol5elc739050o0?key=_2y4mbr50sI/logout",
+		"https://api-fullstack-base.onrender.com/logout",
 		{
 			method: "GET",
 			headers: {
