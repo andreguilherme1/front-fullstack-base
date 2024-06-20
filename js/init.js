@@ -16,7 +16,6 @@ $(document).ready(function(){
       $(".menu-nova-conta").hide();
       $(".text-body-secondary").show();
       $(".menu-logout").show();
-      $(".cancelar-btn").show();
       $(".tudo").hide(function() {
         $("footer").addClass("fixed-footer");
       });
@@ -29,7 +28,6 @@ $(document).ready(function(){
         $('#table-content').hide();
         $('.navbar-toggler').hide();
         $("#userName").hide();
-        $(".cancelar-btn").hide();
       }, 0); // Alterado o valor de timeout para 0
     }
   });
