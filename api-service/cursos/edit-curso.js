@@ -1,5 +1,5 @@
 async function editCurso(id) {
-	await fetch("http://localhost:3000/cursos/"+id,{
+	await fetch("https://api-fullstack-base.onrender.com/cursos/"+id,{
 		method: "GET",
 		headers: {
 		"Content-Type": "application/json",
