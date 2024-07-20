@@ -7,7 +7,7 @@ async function login() {
 		password: password,
 	};
 
-	let url = "https://api-fullstack-base.onrender.com/login";
+	let url = "http://localhost:3000/login";
 
 	if(username === "" || password === ""){
 		return
@@ -53,7 +53,7 @@ async function login() {
 
 function logout() {
 	fetch(
-		"https://api-fullstack-base.onrender.com/logout",
+		"http://localhost:3000/logout",
 		{
 			method: "GET",
 			headers: {

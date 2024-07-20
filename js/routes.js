@@ -31,8 +31,6 @@ function formShow(form){
   
 }
 
-
-
 function tableShow(table) {
   $('#loader').show();
   $('#form-content').hide();
@@ -100,13 +98,10 @@ function tableShow(table) {
       $('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
     }, 700);
   }
-
-  
+ 
 
   
 }
-
-
 
 function loginShow(){
   $('#loader').show()

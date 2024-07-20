@@ -3,9 +3,9 @@ function saveCurso() {
 	let nome = $("#nome").val() // pega o valor do input
 	let descricao = $("#descricao").val() // pega o valor do input 
 	let duracao_semanas = $("#duracao_semanas").val() // pega o valor do input 
-  let n_aulas = $("#n_aulas").val()
-  let nivel = $("#nivel").val()
-  let foto = $("#foto").val()
+  	let n_aulas = $("#n_aulas").val()
+  	let nivel = $("#nivel").val()
+  	let foto = $("#foto").val()
 	let id = $("#index-curso").val() // pega o valor do input 
 
 	let curso = { nome, descricao, duracao_semanas, n_aulas, nivel, foto, id } // criando o objeto
@@ -20,7 +20,7 @@ function saveCurso() {
 		}
 		delete curso.id
 		fetch(
-			"https://api-fullstack-base.onrender.com/cursos/register",
+			"http://localhost:3000/cursos/register",
 			{	
 				method: "POST",
 				headers: {
@@ -45,7 +45,7 @@ function saveCurso() {
 		return
 		}
 		fetch(
-			"https://api-fullstack-base.onrender.com/cursos/update/",
+			"http://localhost:3000/cursos/update/",
 			{
 				method: "PATCH",
 				headers: {

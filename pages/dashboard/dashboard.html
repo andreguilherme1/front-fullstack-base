@@ -23,7 +23,8 @@
 <script>
 
 	async function get(resource) {
-		fetch("https://api-fullstack-base.andreguilherme6.repl.co/" + resource, {
+		$('#table-content').show({ duration: 500, easing: 'swing', effect: 'fade' });
+		fetch("http://localhost:3000" + resource, {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",
